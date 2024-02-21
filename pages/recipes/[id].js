@@ -23,7 +23,7 @@ export default function RecipePage({ getRecipe, toggleFavorite }) {
       </ul>
       <p>{recipe.text}</p>
       <button onClick={() => toggleFavorite(router.query.id)}>
-        {recipe.isfavorite ? "🩷" : "🖤"}
+        {recipe.isFavorite ? "🩷" : "🖤"}
       </button>
     </>
   );
