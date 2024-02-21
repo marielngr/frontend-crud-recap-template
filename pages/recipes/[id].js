@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-export default function RecipePage({ getRecipe }) {
+export default function RecipePage({ getRecipe, toggleFavorite }) {
   const router = useRouter();
   console.log(router.query);
   const recipe = getRecipe(router.query.id);
@@ -22,6 +22,7 @@ export default function RecipePage({ getRecipe }) {
         ))}
       </ul>
       <p>{recipe.text}</p>
+      <button onClick={() => toggleFavorite(router.query.id)}>Herz-Icon</button>
     </>
   );
 }
