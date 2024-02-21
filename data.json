@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Mojito",
+    "ingredients": [
+      "6 cl weißer Rum",
+      "2 cl frischer Limettensaft",
+      "2 Teelöffel Zucker",
+      "8-10 frische Minzblätter",
+      "Soda",
+      "Eiswürfel"
+    ],
+    "text": "Die Minzblätter und den Zucker in ein Glas geben. Mit einem Stößel leicht zerdrücken, um die Aromen freizusetzen. Limettensaft hinzufügen und gut umrühren. Eiswürfel hinzufügen, Rum dazugießen und mit Soda auffüllen. Vorsichtig umrühren und mit einem Minzzweig garnieren.",
+    "img": "https://example.com/mojito.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Piña Colada",
+    "ingredients": [
+      "6 cl weißer Rum",
+      "3 cl Kokosnusscreme",
+      "9 cl Ananassaft",
+      "Eiswürfel"
+    ],
+    "text": "Alle Zutaten in einen Mixer geben und gut mixen, bis die Mischung cremig ist. In ein gekühltes Glas gießen und mit einer Ananasscheibe garnieren.",
+    "img": "https://example.com/pina_colada.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Margarita",
+    "ingredients": [
+      "5 cl Tequila",
+      "2,5 cl Cointreau",
+      "2,5 cl frischer Limettensaft",
+      "Salz (für den Rand des Glases)",
+      "Eiswürfel"
+    ],
+    "text": "Den Rand eines Margaritaglases mit Limettensaft befeuchten und in Salz tauchen. Alle Zutaten in einen Shaker mit Eis geben und kräftig schütteln. In das vorbereitete Glas abseihen und mit einer Limettenscheibe garnieren.",
+    "img": "https://example.com/margarita.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Negroni",
+    "ingredients": [
+      "3 cl Gin",
+      "3 cl Campari",
+      "3 cl roter Wermut",
+      "Orangenzeste (zum Garnieren)",
+      "Eiswürfel"
+    ],
+    "text": "Alle Zutaten in einen mit Eis gefüllten Rührglas geben und gut umrühren. In ein Glas abseihen und mit einer Orangenzeste garnieren.",
+    "img": "https://example.com/negroni.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Whiskey Sour",
+    "ingredients": [
+      "6 cl Bourbon-Whiskey",
+      "3 cl frischer Zitronensaft",
+      "1,5 cl Zuckersirup",
+      "Eiweiß",
+      "Eiswürfel"
+    ],
+    "text": "Alle Zutaten in einen Shaker geben und ohne Eis kräftig schütteln, um das Eiweiß aufzuschäumen. Dann Eis hinzufügen und erneut kräftig schütteln. In ein Glas abseihen und nach Belieben mit einer Zitronenscheibe garnieren.",
+    "img": "https://example.com/whiskey_sour.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Espresso Martini",
+    "ingredients": [
+      "4 cl Wodka",
+      "2 cl Kaffeelikör",
+      "1 cl einfacher Sirup",
+      "1 frisch gebrühter Espresso",
+      "Eiswürfel"
+    ],
+    "text": "Alle Zutaten in einen Shaker mit Eis geben und kräftig schütteln. In ein Martiniglas abseihen und nach Belieben mit drei Kaffeebohnen garnieren.",
+    "img": "https://example.com/espresso_martini.jpg"
+  }
+]
