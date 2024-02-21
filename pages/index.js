@@ -7,8 +7,8 @@ export default function IndexPage({ recipes }) {
       <h1>Cheers & Salute!</h1>
       <h2>Mix fun and have a great time</h2>
       <ul>
-        {recipes.map((recipe) => (
-          <li key={recipe.id}>{recipe.name}</li>
+        {recipes.map(({ id, name }) => (
+          <li key={id}>{name}</li>
         ))}
       </ul>
     </>
