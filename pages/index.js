@@ -4,7 +4,7 @@ import Link from "next/link";
 // and map over it to render it
 export default function IndexPage({ recipes }) {
   return (
-    // const
+    //wie Icon einbinden?
     <>
       <h1>Cheers & Salute!</h1>
       <h2>Mix fun and have a great time</h2>

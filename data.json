@@ -11,9 +11,10 @@
       "Eiswürfel"
     ],
     "text": "Die Minzblätter und den Zucker in ein Glas geben. Mit einem Stößel leicht zerdrücken, um die Aromen freizusetzen. Limettensaft hinzufügen und gut umrühren. Eiswürfel hinzufügen, Rum dazugießen und mit Soda auffüllen. Vorsichtig umrühren und mit einem Minzzweig garnieren.",
-    "img": "http://placekitten.com/g/200/300"
+    "img": "https://loremflickr.com/320/240"
   },
   {
+    "isFavorite": true,
     "id": 2,
     "name": "Piña Colada",
     "ingredients": [
