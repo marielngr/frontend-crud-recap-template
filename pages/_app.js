@@ -11,11 +11,28 @@ export default function App({ Component, pageProps }) {
     return recipes.find((recipe) => recipe.id == id);
   }
 
+  function toggleFavorite(id) {
+    setRecipes(
+      recipes.map((recipe) => {
+        if (recipe.id == id) {
+          return { ...recipe, isFavorite: !recipe.isFavorite };
+        } else {
+          return recipe;
+        }
+      })
+    );
+  }
+
   return (
     <>
       <Nav />
       <main>
-        <Component recipes={recipes} getRecipe={getRecipe} {...pageProps} />
+        <Component
+          recipes={recipes}
+          getRecipe={getRecipe}
+          toggleFavorite={toggleFavorite}
+          {...pageProps}
+        />
       </main>
       <Footer />
     </>
