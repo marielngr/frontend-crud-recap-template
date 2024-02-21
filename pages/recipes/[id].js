@@ -10,11 +10,11 @@ export default function RecipePage({ getRecipe, toggleFavorite }) {
   if (!recipe) {
     return "loading...!";
   }
-
+  //icons können einfach aus der icon tabelle kopiert werden mac: ctrl + cmd + space
   return (
     <>
       <h1>{recipe.name}</h1>
-      {/* <Image src={recipe.img} alt="Cocktailbild" width={200} height={200} /> */}
+      <Image src={recipe.img} alt="Cocktailbild" width={200} height={200} />
       <h2>Ingredients:</h2>
       <ul>
         {recipe.ingredients.map((ingredient) => (
@@ -22,7 +22,9 @@ export default function RecipePage({ getRecipe, toggleFavorite }) {
         ))}
       </ul>
       <p>{recipe.text}</p>
-      <button onClick={() => toggleFavorite(router.query.id)}>Herz-Icon</button>
+      <button onClick={() => toggleFavorite(router.query.id)}>
+        {recipe.isfavorite ? "🩷" : "🖤"}
+      </button>
     </>
   );
 }
