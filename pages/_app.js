@@ -6,13 +6,16 @@ import "../styles/global.css";
 
 export default function App({ Component, pageProps }) {
   const [recipes, setRecipes] = useState(initialRecipes);
-  console.log(recipes);
+
+  function getRecipe(id) {
+    return recipes.find((recipe) => recipe.id == id);
+  }
 
   return (
     <>
       <Nav />
       <main>
-        <Component recipes={recipes} {...pageProps} />
+        <Component recipes={recipes} getRecipe={getRecipe} {...pageProps} />
       </main>
       <Footer />
     </>
