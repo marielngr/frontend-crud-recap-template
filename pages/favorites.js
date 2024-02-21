@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Favorites({ recipes }) {
   return (
     <>
-      <h1>Cheers & Salute!</h1>
+      <h1>🍸 Cheers & Salute! 🍹</h1>
       <h2>Mix your personal Favourites!</h2>
       <ul>
         {recipes

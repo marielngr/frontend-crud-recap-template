@@ -6,7 +6,7 @@ export default function IndexPage({ recipes }) {
   return (
     //wie Icon einbinden?
     <>
-      <h1>Cheers & Salute!</h1>
+      <h1>🍸 Cheers & Salute! 🍹</h1>
       <h2>Mix fun and have a great time</h2>
       <ul>
         {recipes.map(({ id, name }) => (
