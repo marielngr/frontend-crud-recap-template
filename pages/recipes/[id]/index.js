@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function RecipePage({ getRecipe, toggleFavorite, onSubmit }) {
   const router = useRouter();
@@ -25,7 +26,7 @@ export default function RecipePage({ getRecipe, toggleFavorite, onSubmit }) {
         ))}
       </ul>
       <p>{recipe.text}</p>
-      <button onClick={onSubmit}>✏️</button>
+      <Link href={`/recipes/${recipe.id}/edit`}>edit ✏️</Link>
     </>
   );
 }

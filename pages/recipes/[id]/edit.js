@@ -8,7 +8,7 @@ export default function EditForm({ getRecipe }) {
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-
+    // hier gibt es bestimmt noch elegantere Lösung
     const data = {
       ingredients: [],
     };
@@ -20,9 +20,17 @@ export default function EditForm({ getRecipe }) {
     }
 
     console.log("hier sind die daten", data);
+
+    router.push(`/recipes/${recipe.id}`);
   }
+
   if (!recipe) {
-    return <div>Loading</div>;
+    return "Loading...";
   }
-  return <Form onSubmit={handleSubmit} recipe={recipe} />;
+  return (
+    <>
+      <h1>Edit Cocktail</h1>
+      <Form onSubmit={handleSubmit} recipe={recipe} />
+    </>
+  );
 }

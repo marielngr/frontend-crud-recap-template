@@ -7,12 +7,17 @@ export default function Form({ onSubmit, recipe = {} }) {
     <>
       <form onSubmit={onSubmit}>
         <label>
-          Name
+          Bild <br />
+          <input name="img" defaultValue={recipe.img}></input>
+        </label>
+        <br />
+        <label>
+          Name <br />
           <input name="name" required defaultValue={recipe.name}></input>
         </label>
         <br />
         <label>
-          Ingredients
+          Ingredients <br />
           {recipe.ingredients.map((ingredient, index) => {
             return (
               <Fragment key={index}>
@@ -32,6 +37,7 @@ export default function Form({ onSubmit, recipe = {} }) {
             defaultValue={recipe.text}
           ></textarea>
         </label>
+        <br />
         <button type="submit">Submit</button>
       </form>
     </>
