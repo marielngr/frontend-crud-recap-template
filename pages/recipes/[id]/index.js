@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-export default function RecipePage({ getRecipe, toggleFavorite }) {
+export default function RecipePage({ getRecipe, toggleFavorite, onSubmit }) {
   const router = useRouter();
   console.log(router.query);
   const recipe = getRecipe(router.query.id);
@@ -15,6 +15,9 @@ export default function RecipePage({ getRecipe, toggleFavorite }) {
     <>
       <h1>{recipe.name}</h1>
       <Image src={recipe.img} alt="Cocktailbild" width={200} height={200} />
+      <button onClick={() => toggleFavorite(router.query.id)}>
+        {recipe.isFavorite ? "🩷" : "🖤"}
+      </button>
       <h2>Ingredients:</h2>
       <ul>
         {recipe.ingredients.map((ingredient) => (
@@ -22,9 +25,7 @@ export default function RecipePage({ getRecipe, toggleFavorite }) {
         ))}
       </ul>
       <p>{recipe.text}</p>
-      <button onClick={() => toggleFavorite(router.query.id)}>
-        {recipe.isFavorite ? "🩷" : "🖤"}
-      </button>
+      <button onClick={onSubmit}>✏️</button>
     </>
   );
 }
