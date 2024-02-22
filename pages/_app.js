@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
   function toggleFavorite(id) {
     setRecipes(
       recipes.map((recipe) => {
-        if (recipe.id == id) {
+        if (recipe.id === id) {
           return { ...recipe, isFavorite: !recipe.isFavorite };
         } else {
           return recipe;
