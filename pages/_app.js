@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-import initialRecipes from '../data.json';
-import '../styles/global.css';
+import { useState } from "react";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import initialRecipes from "../data.json";
+import "../styles/global.css";
 
 export default function App({ Component, pageProps }) {
   const [recipes, setRecipes] = useState(initialRecipes);
@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   function getRecipe(id) {
     return recipes.find((recipe) => recipe.id == id);
   }
-
+  //editRecipe
   function handleUpdateRecipe(updatedRecipe) {
     const updatedRecipes = recipes.map((recipe) => {
       if (recipe.id === updatedRecipe.id) {
@@ -20,6 +20,10 @@ export default function App({ Component, pageProps }) {
     });
     setRecipes(updatedRecipes);
   }
+
+  //addRecipe
+
+  //deleteRecipe
 
   function toggleFavorite(id) {
     setRecipes(

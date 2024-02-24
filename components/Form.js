@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
 
 export default function Form({ onSubmit, recipe = {} }) {
   // ={} recipe ist ein default value, falls keine recipe-property übergeben wurde (Neuanlage statt Bearbeitung), damit nicht Fehler undefined
