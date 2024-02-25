@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   //Aufgabe _app.js: andere Componenten mit Daten versorgen
   //andere Componenten sind für Darstellung (single responsibility principle)
 
-  //hier könnte auch API-Aufruf ans Backend stehen
+  //Read / hier könnte auch API-Aufruf ans Backend stehen
   function getRecipe(id) {
     return recipes.find((recipe) => recipe.id == id);
   }
@@ -36,7 +36,11 @@ export default function App({ Component, pageProps }) {
     console.log("newRecipes", recipes.id);
   }
 
-  //deleteRecipe
+  //delete
+  function removeRecipe(id) {
+    const remainingRecipes = recipes.filter((recipe) => recipe.id !== id);
+    setRecipes(remainingRecipes);
+  }
 
   function toggleFavorite(id) {
     setRecipes(
@@ -61,6 +65,7 @@ export default function App({ Component, pageProps }) {
           toggleFavorite={toggleFavorite}
           onUpdateRecipe={handleUpdateRecipe}
           addRecipe={addRecipe}
+          removeRecipe={removeRecipe}
           {...pageProps}
         />
       </main>
