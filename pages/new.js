@@ -1,18 +1,21 @@
 import Form from "@/components/Form";
 import { useRouter } from "next/router";
 
-export default function NewPage({ addAlbum }) {
+export default function NewPage({ addRecipe }) {
   const router = useRouter();
 
-  function onSubmit(data) {
-    addAlbum(data);
+  //warum async??
+  async function handleSubmit(newRecipe) {
+    addRecipe(newRecipe);
+
+    //ggfls id abfragen und direkt zur neuen Seite pushen???
     router.push("/");
   }
 
   return (
     <>
       <h1>New Cocktail</h1>
-      <Form onSubmit={onSubmit} />
+      <Form onSubmit={handleSubmit} />
     </>
   );
 }

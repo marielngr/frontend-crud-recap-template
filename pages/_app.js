@@ -3,13 +3,20 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import initialRecipes from "../data.json";
 import "../styles/global.css";
+import { nanoid } from "nanoid";
 
 export default function App({ Component, pageProps }) {
   const [recipes, setRecipes] = useState(initialRecipes);
 
+  //Aufgabe _app.js: andere Componenten mit Daten versorgen
+  //andere Componenten sind für Darstellung (single responsibility principle)
+
+  //hier könnte auch API-Aufruf ans Backend stehen
   function getRecipe(id) {
     return recipes.find((recipe) => recipe.id == id);
   }
+
+  //CRUD-Funktionen für Verhalten
   //editRecipe
   function handleUpdateRecipe(updatedRecipe) {
     const updatedRecipes = recipes.map((recipe) => {
@@ -22,7 +29,12 @@ export default function App({ Component, pageProps }) {
   }
 
   //addRecipe
-  function addRecipe() {}
+  function addRecipe(data) {
+    console.log("newRecipe data:", data);
+    const newRecipes = [...recipes, { id: nanoid(), ...data }];
+    setRecipes(newRecipes);
+    console.log("newRecipes", recipes.id);
+  }
 
   //deleteRecipe
 
@@ -48,6 +60,7 @@ export default function App({ Component, pageProps }) {
           getRecipe={getRecipe}
           toggleFavorite={toggleFavorite}
           onUpdateRecipe={handleUpdateRecipe}
+          addRecipe={addRecipe}
           {...pageProps}
         />
       </main>
