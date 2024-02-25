@@ -7,7 +7,7 @@ export default function Form({ onSubmit, recipe = {} }) {
     <>
       <form onSubmit={onSubmit}>
         <label>
-          Bild <br />
+          Bild-URL <br />
           <input name="img" defaultValue={recipe.img}></input>
         </label>
         <br />
