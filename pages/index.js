@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function IndexPage({ recipes }) {
+  console.log(recipes);
   return (
     <>
       <h1>🍸 Cheers & Salute! 🍹</h1>
