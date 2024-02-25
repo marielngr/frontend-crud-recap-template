@@ -8,8 +8,7 @@ export default function NewPage({ addRecipe }) {
   async function handleSubmit(newRecipe) {
     addRecipe(newRecipe);
 
-    //ggfls id abfragen und direkt zur neuen Seite pushen???
-    router.push("/");
+    router.push(`/recipes/${newRecipe.id}`);
   }
 
   return (

@@ -31,7 +31,8 @@ export default function App({ Component, pageProps }) {
   //addRecipe
   function addRecipe(data) {
     console.log("newRecipe data:", data);
-    const newRecipes = [...recipes, { id: nanoid(), ...data }];
+    data.id = nanoid();
+    const newRecipes = [...recipes, { ...data }];
     setRecipes(newRecipes);
     console.log("newRecipes", recipes.id);
   }
