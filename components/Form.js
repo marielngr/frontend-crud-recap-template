@@ -18,18 +18,19 @@ export default function Form({ onSubmit, recipe = {} }) {
         <br />
         <label>
           Ingredients <br />
-          {recipe.ingredients.map((ingredient, index) => {
-            return (
-              <Fragment key={index}>
-                <input
-                  id={index}
-                  name="ingredients[]"
-                  defaultValue={ingredient}
-                ></input>
-                <br />
-              </Fragment>
-            );
-          })}
+          {recipe.ingredients &&
+            recipe.ingredients.map((ingredient, index) => {
+              return (
+                <Fragment key={index}>
+                  <input
+                    id={index}
+                    name="ingredients[]"
+                    defaultValue={ingredient}
+                  ></input>
+                  <br />
+                </Fragment>
+              );
+            })}
           <input name="ingredients[]"></input>
           <br />
         </label>
